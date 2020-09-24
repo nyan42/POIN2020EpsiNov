@@ -1,0 +1,204 @@
+/* .checkbox {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+} width="190px" height="100px"
+*/
+
+#txt1 {
+    text-align: center;
+}
+
+#txt1 span {
+    font-style: italic;
+}
+
+h2.tm-text-title{
+    padding-bottom: none;
+}
+
+#design1 .tm-img-gallery-container {
+    /** centre */
+    background-color: #A6A197;
+    padding: 33px;
+}
+
+.tm-navbar-bg {
+    /** menu du haut */
+    background-color: #D9D1C7;
+}
+
+
+html .toto {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.toto p {
+    color: black;
+}
+
+.toto h2 {
+    color: rgb(73, 73, 73);
+}
+
+.toto .column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .toto .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.toto .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+}
+
+.toto .container {
+    padding: 0 16px;
+    margin: 10px;
+}
+
+.toto img {
+    height: 250px;
+    width: 80px;
+}
+
+.toto .container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.toto .title {
+    color: rgb(71, 71, 71);
+}
+
+.toto .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #555;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.toto .button:hover {
+    background-color: #555;
+}
+
+
+
+
+.centerreview {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.imgmenu {
+    max-width: 45%;
+    height: auto;
+    margin: auto;
+}
+
+
+.CustomBootstrap {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    width: 50%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+/***** BOUTON A MODIFIE *********************/
+
+.btn-grad:hover {
+    background-image: linear-gradient(to right, #28c5b5 0%, #036288 100%)
+        /*border: 2px solid rgb(158, 40, 255);*/
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #1e978b 0%, #024059 100%)
+}
+
+.btn-grad:hover {
+    background-position: right center;
+}
+
+/**********************************************/
+
+
+.allCheckbox input[type="checkbox"][id^="cb"] {
+    display: none;
+}
+
+.allCheckbox label {
+    padding: 3px;
+    display: block;
+    position: relative;
+    margin: 3px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.allCheckbox label::before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+.allCheckbox label img {
+    transition-duration: 0.2s;
+    transform-Origin: 50% 50%;
+}
+
+.allCheckbox :checked+label {
+    border-color: #ddd;
+}
+
+.allCheckbox :checked+label::before {
+    content: "✓";
+    background-color: rgb(13, 160, 0);
+    transform: scale(1);
+}
+
+.allCheckbox :checked+label img {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px #333;
+    z-index: 0;
+}

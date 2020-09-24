@@ -1,0 +1,81 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>EPSI'NOV</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="../font-awesome-4.5.0/css/font-awesome.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Bootstrap style -->
+    <link rel="stylesheet" href="../css/hero-slider-style.css">
+    <!-- Hero slider style (https://codyhouse.co/gem/hero-slider/) -->
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
+    <link rel="stylesheet" href="../css/tooplate-style.css">
+    <link rel="stylesheet" href="css.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <!-- Ladda Button -->
+    <link rel="stylesheet" href="../ladda/dist/ladda-themeless.min.css">
+    <script src="../ladda/dist/spin.min.js"></script>
+    <script src="../ladda/dist/ladda.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <ul>
+        <li><input type="checkbox" id="cb1" />
+            <label for="cb1"><img src="../img/tm-img-01-tn.jpg" /></label>
+        </li>
+        <li><input type="checkbox" id="cb2" />
+            <label for="cb2"><img src="../img/tm-img-02-tn.jpg" /></label>
+        </li>
+        <li><input type="checkbox" id="cb3" />
+            <label for="cb3"><img src="../img/tm-img-03-tn.jpg" /></label>
+        </li>
+        <li><input type="checkbox" id="cb4" />
+            <label for="cb4"><img src="../img/tm-img-04-tn.jpg" /></label>
+        </li>
+    </ul>
+
+    <button type="submit" class="btn btn-success btn-ladda-progress ladda-button" data-style="expand-right">Submit</button>
+    <span class="ladda-label">expand-right</span>
+<p>.</p>
+</br>
+
+    <script>
+        Ladda.bind('button[type=submit]', {
+            callback: function (instance) {
+                var progress = 0;
+                var interval = setInterval(function () {
+                    progress = Math.min(progress + Math.random() * 0.1, 1);
+                    instance.setProgress(progress);
+
+                    if (progress === 1) {
+                        instance.stop();
+                        clearInterval(interval);
+                    }
+                }, 200);
+            }
+        });
+        /*Ladda.bind('input[type=submit]', {
+                    timeout: 2000
+                });
+                /*var l = Ladda.create(this);
+                l.start();*/
+        /*const btn = Ladda.create(document.querySelector('#bouton'));
+        btn.start();
+        btn.setProgress(0.5);
+        btn.stop();
+        btn.toggle();
+        btn.isLoading();
+        btn.remove();*/
+    </script>
+</body>
